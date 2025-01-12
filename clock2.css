@@ -1,0 +1,16 @@
+#clock {
+    font-size: 100px;
+    width: 900px; height: 500px;
+    margin: 200px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    }
+.Div1 {
+        font-size: 30px;
+        width: 900px; height: 300px;
+        margin: 200px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        }

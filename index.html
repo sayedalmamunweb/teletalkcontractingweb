@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+     <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+</head>
+<body>
+  <div class="Div0">
+    <img src="LOGO.gif" alt="Factory-Logo" width="100px" height="100px"> <span> <img src="TTC.gif" width="500px" height="100px"></span><Br>
+    <marquee> <H4>All Kinds of AC, Fridge & Washing machine Repairing, Sells & Purchesing service avaliable</H4> </marquee>
+  <hr>
+  </div>
+  <div class="navbar">
+    <ul>
+      <li> <a href="trah trading.pdf" target="_blank">PROFILE </a></li>
+      <li> <a href="http://wa.me/+97470950841">Click to Call</a></li>
+      <li> <a href="mailto:teletalk.qa@gmail.com">Email us</a></li>
+      <li><a href="#"> OUR SERVICES </a>
+        <ul>
+          <li>Air Condition Mantinenec</li>
+          <li>Air Condition Installation</li>
+          <li>Air Condition Repairing</li>
+          <li>Air Condition Selling</li>
+          <li>Window Air Condition Selling</li>
+          <li>Fridge Repairing</li>
+          <li>Washing Machine Repairing</li>
+          <li>Ducting Work</li>
+        </ul>
+      </li>
+    
+  </div>
+  <main>
+    <div class="Div1">
+      <div class="time">
+            <span class="hms"></span>
+            <span class="ampm"></span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="date"></span>
+      </div>
+      <script>
+        function updateTime() {
+          var dateInfo = new Date();
+
+          /* time Start */
+          var hr,
+            _min = (dateInfo.getMinutes() < 10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+            sec = (dateInfo.getSeconds() < 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+            ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+
+          // replace 0 with 12 at midnight, subtract 12 from hour if 13–23
+          if (dateInfo.getHours() == 0) {
+            hr = 12;
+          } else if (dateInfo.getHours() > 12) {
+            hr = dateInfo.getHours() - 12;
+          } else {
+            hr = dateInfo.getHours();
+          }
+
+          var currentTime = hr + ":" + _min + ":" + sec;
+
+          // time End
+          document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+          document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+          /* date start */
+          var dow = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+            month = [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December"
+            ],
+            year = dateInfo.getFullYear();
+            day = dateInfo.getDate();
+
+          // date End
+
+          var currentDate = dow[dateInfo.getDay()] + ", " + day + "  " + month[dateInfo.getMonth()]+ " "+year+" ";
+
+          document.getElementsByClassName("date")[0].innerHTML = currentDate;
+        };
+        // print time and date once, then update them every second
+        updateTime();
+        setInterval(function () {
+          updateTime()
+        }, 1000);
+      </script>
+          </div>
+    <div class="Div2">
+      <u>Our Services:</u>
+      <ul> 
+          <li>Air Condition Mantinenec</li>
+          <li>Air Condition Installation</li>
+          <li>Air Condition Repairing</li>
+          <li>Air Condition Selling</li>
+          <li>Window Air Condition Selling</li>
+          <li>Fridge Repairing</li>
+          <li>Washing Machine Repairing</li>
+          <li>Ducting Work</li>
+     </ul>
+</div>
+    <div class="Div6"> <h3>Description</h3>
+     <p> 
+Hi, I am working as Air Conditioner Technician since 2010 in Doha. I have a AC store also. I can repair any kind of Air conditioner like Window, Split & Central type. I have some very good condition AC for sale. So, if anyone interested any of these please contact me.
+Call :- 70950841 (WhatsApp Available)</p>
+    </div>
+    <div class="Div7">
+             <p> <span> Address :</span>  C.R : 186000,DOHA - QATAR, Mobile : 55727625, 70950841 ,Office e-mail: teletalk.qa@gmail.com </p>
+        </div>
+  </main>
+</body>
+
+</html>
